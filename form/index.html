@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Survey Form</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Survey Form</h1>
+        <p>Let us know how we can improve freeCodeCamp</p>
+        <form>
+            <label for="name">* Name:</label>
+            <input type="text" id="name" name="name" placeholder="Enter your name" required>
+
+            <label for="email">* Email:</label>
+            <input type="email" id="email" name="email" placeholder="Enter your Email" required>
+
+            <label for="age">* Age:</label>
+            <input type="number" id="age" name="age" placeholder="Age" required>
+
+            <label for="role">Which option best describes your current role?</label>
+            <select id="role" name="role">
+                <option value="student">Student</option>
+                <option value="full-time-job">Full Time Job</option>
+                <option value="learner">Learner</option>
+                <option value="prefer-not-to-say">Prefer not to say</option>
+                <option value="other">Other</option>
+            </select>
+
+            <label>* How likely is it that you would recommend freeCodeCamp to a friend?</label>
+            <div>
+                <input type="radio" id="definitely" name="recommend" value="definitely" required>
+                <label for="definitely">Definitely</label>
+            </div>
+            <div>
+                <input type="radio" id="maybe" name="recommend" value="maybe">
+                <label for="maybe">Maybe</label>
+            </div>
+            <div>
+                <input type="radio" id="not-sure" name="recommend" value="not-sure">
+                <label for="not-sure">Not sure</label>
+            </div>
+
+            <label for="like">What do you like most in FCC:</label>
+            <select id="like" name="like">
+                <option value="front-end-projects">Front-end Projects</option>
+                <option value="back-end-projects">Back-end Projects</option>
+                <option value="data-visualization">Data Visualization</option>
+            </select>
+
+            <label>Things that should be improved in the future (Check all that apply):</label>
+            <div>
+                <input type="checkbox" id="frontend" name="improve" value="frontend">
+                <label for="frontend">Front-end Projects</label>
+            </div>
+            <div>
+                <input type="checkbox" id="backend" name="improve" value="backend">
+                <label for="backend">Back-end Projects</label>
+            </div>
+            <div>
+                <input type="checkbox" id="data" name="improve" value="data">
+                <label for="data">Data Visualization</label>
+            </div>
+
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+
+    <script>
+        function toggleForm() {
+            const formContainer = document.getElementById("formContainer");
+            if (formContainer.style.display === "none" || !formContainer.style.display) {
+                formContainer.style.display = "block";
+            } else {
+                formContainer.style.display = "none";
+            }
+        }
+    </script>
+</body>
+</html>
